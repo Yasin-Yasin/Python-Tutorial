@@ -1,6 +1,3 @@
-from sys import stderr
-
-
 student = {'name' : 'Safwan', 'age' : 25, 'courses' : ['Math', 'CompSci']}
 
 print(student['name'])
