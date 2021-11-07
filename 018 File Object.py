@@ -8,7 +8,7 @@
 
 # Open file using context manager
 
-with open('test.txt', 'r') as f:
+# with open('test.txt', 'r') as f:
     # f_content = f.read() # Read Whole file
     # print(f_content)
 
@@ -37,16 +37,48 @@ with open('test.txt', 'r') as f:
     #     f_content4 = f.read(size_to_read)
 
     # f.tell() and f.seek()
-    size_to_read =10
-    fcontent = f.read(size_to_read)
-    print(fcontent, end='')
+    # size_to_read =10
+    # fcontent = f.read(size_to_read)
+    # print(fcontent, end='')
 
-    # f.seek(0) # Set pointer to begining of the file
-    f.seek(20)
-    fcontent = f.read(size_to_read)
-    print(fcontent)
+    # # f.seek(0) # Set pointer to begining of the file
+    # f.seek(20)
+    # fcontent = f.read(size_to_read)
+    # print(fcontent)
 
-    print(f.tell()) # Tell where the pointer is 
+    # print(f.tell()) # Tell where the pointer is 
     
 
 # print(f.closed) # Return True if file is closed
+
+# ---------------------------------------- Writing to File ---------------------------------------------
+
+# with open('test1.txt', 'w') as f:
+#     f.write('Test')
+#     f.seek(0)
+#     f.write('R')
+
+# ---------------------------- Read and Write --------------------------------------------
+
+# Copy file
+
+# with open ('test.txt', 'r') as rf:
+#     with open ('test_copy.txt', 'w') as wf:
+#         for line in rf:
+#             wf.write(line)
+
+# Copy image file - Open in Byte mode
+
+# with open ('nature.jpg', 'rb') as rf:
+#     with open ('nature_copy.jpg', 'wb') as wf:
+#         for line in rf:
+#             wf.write(line)
+
+# # Raed file in particular size
+# with open ('nature.jpg', 'rb') as rf:
+#     with open('nature_copy1.jpg', 'wb') as wf:
+#         chunk_size = 4096 # data to read
+#         rf_chunk= rf.read(chunk_size) # It will read 4096 data, stored in rf_chunk
+#         while len(rf_chunk) > 0: 
+#             wf.write(rf_chunk) # write that data in nature_copy1 file
+#             rf_chunk = rf.read(chunk_size) # Read next chunk of data
